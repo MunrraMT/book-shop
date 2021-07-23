@@ -14,6 +14,7 @@ const Footer = () => (
       <StyledFooter.Li>
         <a href='/'>
           <span>
+            <StyledFooter.Count>12</StyledFooter.Count>
             <i className='fas fa-bookmark' />
           </span>
           favoritos
@@ -22,13 +23,14 @@ const Footer = () => (
       <StyledFooter.Li>
         <a href='/'>
           <span>
+            <StyledFooter.Count>05</StyledFooter.Count>
             <i className='fas fa-shopping-cart' />
           </span>
           carrinho
         </a>
       </StyledFooter.Li>
       <StyledFooter.Li>
-        <a rel='ugc' href='https://github.com/MunrraMT'>
+        <a rel='ugc' href='https://github.com/MunrraMT/book-shop'>
           <span>
             <i className='fab fa-github' />
           </span>

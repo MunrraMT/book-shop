@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Count from './count';
 import Li from './li';
 import Ul from './ul';
 
@@ -14,5 +15,6 @@ const StyledFooter = styled.footer`
 
 StyledFooter.Ul = Ul;
 StyledFooter.Li = Li;
+StyledFooter.Count = Count;
 
 export default StyledFooter;

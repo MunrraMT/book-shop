@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const Li = styled.li`
+  position: relative;
+
   a {
     color: var(--color-hover);
     text-decoration: none;
