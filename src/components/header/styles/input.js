@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 const Input = styled.input`
+  height: 2.25rem;
+  width: 70vw;
+  margin-bottom: 0.75rem;
   background-color: #44475a;
   padding: 0.5rem;
-  margin-bottom: 0.75rem;
-  margin-top: 0.75rem;
   text-indent: 0.5rem;
-  width: 70vw;
   border: none;
   color: #f8f8f2;
   border-top-left-radius: 1rem;
@@ -15,8 +15,6 @@ const Input = styled.input`
   &:focus + span,
   &:focus {
     border: 2px solid blue;
-    margin-bottom: calc(0.75rem - 2px);
-    margin-top: calc(0.75rem - 2px);
   }
 
   &:focus {
