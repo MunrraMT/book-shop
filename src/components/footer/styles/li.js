@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Li = styled.li`
   a {
-    color: var(--color-text);
+    color: var(--color-hover);
     text-decoration: none;
     text-transform: capitalize;
 
@@ -17,7 +17,7 @@ const Li = styled.li`
   }
 
   a:hover {
-    color: var(--color-hover);
+    color: var(--color-text);
   }
 `;
 
