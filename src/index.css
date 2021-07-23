@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --color-background-dark: #282a36;
+  --color-background-light: #44475a;
+  --color-text: #f8f8f2;
+  --color-hover: #6272a4;
+  --color-focus: #50fa7b;
+}

@@ -6,7 +6,7 @@ import Span from './span';
 import Title from './title';
 
 const StyledHeader = styled.header`
-  background-color: #282a36;
+  background-color: var(--color-background-dark);
 
   display: flex;
   flex-direction: column;

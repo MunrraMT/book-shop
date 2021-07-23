@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 const Span = styled.span`
-  background-color: #44475a;
+  background-color: var(--color-background-light);
   padding: 0.45rem;
   height: 2.25rem;
   margin-bottom: 0.75rem;
-  color: #f8f8f2;
+  color: var(--color-text);
   width: 2.2rem;
   border: none;
   border-top-right-radius: 1rem;
