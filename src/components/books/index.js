@@ -5,7 +5,7 @@ const BooksContent = () => (
   <StyledBooks>
     <StyledBooks.Title>Livros por Autor</StyledBooks.Title>
     <section>
-      <ViewerByAuthor />
+      <ViewerByAuthor author='jung' maxBooks='4' />
     </section>
   </StyledBooks>
 );

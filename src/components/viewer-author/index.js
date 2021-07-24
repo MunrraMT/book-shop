@@ -1,83 +1,15 @@
 import StyledViewerByAuthor from './styles/styled-viewer-by-author';
+import formatBooksAuthor from './logic/format-books-author';
 
-const ViewerByAuthor = () => (
+// eslint-disable-next-line react/prop-types
+const ViewerByAuthor = ({ author, maxBooks }) => (
   <StyledViewerByAuthor>
     <header>
       <StyledViewerByAuthor.Title>Carl Gustave Jung</StyledViewerByAuthor.Title>
     </header>
 
     <StyledViewerByAuthor.BooksList>
-      <StyledViewerByAuthor.BookLink href='/'>
-        <StyledViewerByAuthor.BookContainer>
-          <StyledViewerByAuthor.BookImg
-            src='http://books.google.com/books/content?id=fbU1DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
-            alt='capa do livro, Seminários sobre Psicologia Analítica (1925) Carl Gustav Jung'
-          />
-          <StyledViewerByAuthor.BookTitle>
-            Seminários sobre Psicologia Analítica (1925) Carl Gustav Jung
-          </StyledViewerByAuthor.BookTitle>
-          <StyledViewerByAuthor.BookAuthor>
-            Carl Gustav Jung
-          </StyledViewerByAuthor.BookAuthor>
-          <StyledViewerByAuthor.BookPrice>
-            R$ 60,70
-          </StyledViewerByAuthor.BookPrice>
-        </StyledViewerByAuthor.BookContainer>
-      </StyledViewerByAuthor.BookLink>
-
-      <StyledViewerByAuthor.BookLink href='/'>
-        <StyledViewerByAuthor.BookContainer>
-          <StyledViewerByAuthor.BookImg
-            src='http://books.google.com/books/content?id=fbU1DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
-            alt='capa do livro, Seminários sobre Psicologia Analítica (1925) Carl Gustav Jung'
-          />
-          <StyledViewerByAuthor.BookTitle>
-            Seminários sobre Psicologia Analítica (1925) Carl Gustav Jung
-          </StyledViewerByAuthor.BookTitle>
-          <StyledViewerByAuthor.BookAuthor>
-            Carl Gustav Jung
-          </StyledViewerByAuthor.BookAuthor>
-          <StyledViewerByAuthor.BookPrice>
-            R$ 60,70
-          </StyledViewerByAuthor.BookPrice>
-        </StyledViewerByAuthor.BookContainer>
-      </StyledViewerByAuthor.BookLink>
-
-      <StyledViewerByAuthor.BookLink href='/'>
-        <StyledViewerByAuthor.BookContainer>
-          <StyledViewerByAuthor.BookImg
-            src='http://books.google.com/books/content?id=fbU1DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
-            alt='capa do livro, Seminários sobre Psicologia Analítica (1925) Carl Gustav Jung'
-          />
-          <StyledViewerByAuthor.BookTitle>
-            Seminários sobre Psicologia Analítica (1925) Carl Gustav Jung
-          </StyledViewerByAuthor.BookTitle>
-          <StyledViewerByAuthor.BookAuthor>
-            Carl Gustav Jung
-          </StyledViewerByAuthor.BookAuthor>
-          <StyledViewerByAuthor.BookPrice>
-            R$ 60,70
-          </StyledViewerByAuthor.BookPrice>
-        </StyledViewerByAuthor.BookContainer>
-      </StyledViewerByAuthor.BookLink>
-
-      <StyledViewerByAuthor.BookLink href='/'>
-        <StyledViewerByAuthor.BookContainer>
-          <StyledViewerByAuthor.BookImg
-            src='http://books.google.com/books/content?id=fbU1DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
-            alt='capa do livro, Seminários sobre Psicologia Analítica (1925) Carl Gustav Jung'
-          />
-          <StyledViewerByAuthor.BookTitle>
-            Seminários sobre Psicologia Analítica (1925) Carl Gustav Jung
-          </StyledViewerByAuthor.BookTitle>
-          <StyledViewerByAuthor.BookAuthor>
-            Carl Gustav Jung
-          </StyledViewerByAuthor.BookAuthor>
-          <StyledViewerByAuthor.BookPrice>
-            R$ 60,70
-          </StyledViewerByAuthor.BookPrice>
-        </StyledViewerByAuthor.BookContainer>
-      </StyledViewerByAuthor.BookLink>
+      {formatBooksAuthor(author, maxBooks)}
     </StyledViewerByAuthor.BooksList>
 
     <footer>
