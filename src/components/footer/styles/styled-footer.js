@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Count from './count';
-import Li from './li';
-import Ul from './ul';
+import FooterCount from './footer-count';
+import FooterItem from './footer-item';
+import FooterList from './footer-list';
 
 const StyledFooter = styled.footer`
   background-color: var(--color-background-dark);
@@ -13,8 +13,8 @@ const StyledFooter = styled.footer`
   left: 0;
 `;
 
-StyledFooter.Ul = Ul;
-StyledFooter.Li = Li;
-StyledFooter.Count = Count;
+StyledFooter.List = FooterList;
+StyledFooter.Item = FooterItem;
+StyledFooter.Count = FooterCount;
 
 export default StyledFooter;

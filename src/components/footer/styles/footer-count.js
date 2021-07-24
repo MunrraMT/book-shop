@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Count = styled.p`
+const FooterCount = styled.p`
   height: 1.5rem;
   width: 1.5rem;
 
@@ -18,4 +18,4 @@ const Count = styled.p`
   right: 0;
 `;
 
-export default Count;
+export default FooterCount;

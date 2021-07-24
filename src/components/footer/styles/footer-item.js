@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Li = styled.li`
+const FooterItem = styled.li`
   position: relative;
 
   a {
@@ -23,4 +23,4 @@ const Li = styled.li`
   }
 `;
 
-export default Li;
+export default FooterItem;

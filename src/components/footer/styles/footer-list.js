@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Ul = styled.ul`
+const FooterList = styled.ul`
   list-style: none;
   height: 100%;
 
@@ -9,4 +9,4 @@ const Ul = styled.ul`
   justify-content: space-around;
 `;
 
-export default Ul;
+export default FooterList;
