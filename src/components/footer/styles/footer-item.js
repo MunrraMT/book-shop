@@ -20,6 +20,10 @@ const FooterItem = styled.li`
 
   a:hover {
     color: var(--color-text);
+
+    p {
+      background-color: var(--color-hover);
+    }
   }
 `;
 
