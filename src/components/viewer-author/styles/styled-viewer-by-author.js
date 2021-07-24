@@ -14,8 +14,10 @@ const StyledViewerByAuthor = styled.article`
   background-color: var(--color-background-light);
   padding: 1rem;
   padding-top: 0;
-  width: 100vw;
+  width: calc(100vw - 2rem);
+  border-radius: 1rem;
 
+  margin: 0 auto;
   margin-bottom: 2rem;
 
   &:last-of-type {
