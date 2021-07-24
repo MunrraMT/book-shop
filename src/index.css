@@ -2,12 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--color-background-very-light);
 }
 
 :root {
   --color-background-dark: #282a36;
   --color-background-light: #44475a;
+  --color-background-very-light: #dee1f0;
+  --color-background-white: #ebefff;
   --color-text: #f8f8f2;
   --color-hover: #6272a4;
   --color-focus: #50fa7b;
+  --color-red: #ff5555;
 }
