@@ -1,7 +1,5 @@
 const getFetch = async (url) => {
-  const response = await fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=${url}`
-  );
+  const response = await fetch(`${url}`);
 
   if (!response.ok) {
     throw new Error(`Erro no Get de ${url}`);
