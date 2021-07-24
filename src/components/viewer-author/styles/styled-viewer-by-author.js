@@ -20,8 +20,9 @@ const StyledViewerByAuthor = styled.article`
   margin: 0 auto;
   margin-bottom: 2rem;
 
-  &:last-of-type {
-    margin-bottom: 5rem;
+  &:last-child {
+    color: red !important;
+    margin-bottom: 6rem;
   }
 `;
 
