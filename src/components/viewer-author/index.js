@@ -1,11 +1,14 @@
 import StyledViewerByAuthor from './styles/styled-viewer-by-author';
 import formatBooksAuthor from './logic/format-books-author';
+import booksAuthorTitle from './logic/books-author';
 
 // eslint-disable-next-line react/prop-types
 const ViewerByAuthor = ({ author, maxBooks }) => (
-  <StyledViewerByAuthor>
+  <StyledViewerByAuthor key={booksAuthorTitle(author)}>
     <header>
-      <StyledViewerByAuthor.Title>Carl Gustave Jung</StyledViewerByAuthor.Title>
+      <StyledViewerByAuthor.Title>
+        {booksAuthorTitle(author)}
+      </StyledViewerByAuthor.Title>
     </header>
 
     <StyledViewerByAuthor.BooksList>

@@ -1,40 +1,46 @@
 import { useEffect, useState } from 'react';
-import formatPrice from '../../utils/format-price';
-import getDataAuthor from '../../utils/get-data-author';
 import StyledViewerByAuthor from '../styles/styled-viewer-by-author';
+import {
+  isExistAuthor,
+  isExistPrice,
+  isExistThumbnail,
+  isExistTitle
+} from './books-is-valid';
 
 const formatBooksAuthor = (author, maxBooks) => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    async function getData() {
-      setBooks(await getDataAuthor(author, maxBooks));
-    }
-
-    getData();
+    fetch(
+      `https://www.googleapis.com/books/v1/volumes?q=inauthor:${author}&maxResults=${maxBooks}&langRestric=pt-BR&orderBy=relevance`
+    )
+      .then((response) => response.json())
+      .then(({ items }) => setBooks(items));
   }, []);
 
   const booksFormated = books.map((book) => (
-    <StyledViewerByAuthor.BookLink href={`/detail/${book.id}`}>
-      <StyledViewerByAuthor.BookContainer>
-        <StyledViewerByAuthor.BookImg
-          src={`${book.volumeInfo.imageLinks.thumbnail}`}
-          alt={`capa do livro, ${book.volumeInfo.title}`}
-        />
-        <StyledViewerByAuthor.BookTitle>
-          {`${book.volumeInfo.title}`}
-        </StyledViewerByAuthor.BookTitle>
-        <StyledViewerByAuthor.BookAuthor>
-          {`${book.volumeInfo.authors[0]}`}
-        </StyledViewerByAuthor.BookAuthor>
-        <StyledViewerByAuthor.BookPrice>
-          {formatPrice(book.saleInfo.listPrice.amount)}
-        </StyledViewerByAuthor.BookPrice>
-      </StyledViewerByAuthor.BookContainer>
-    </StyledViewerByAuthor.BookLink>
+    <StyledViewerByAuthor.Item key={book.id}>
+      <StyledViewerByAuthor.BookLink href={`/detail/${book.id}`}>
+        <StyledViewerByAuthor.BookContainer>
+          <StyledViewerByAuthor.BookImg
+            height='192'
+            width='128'
+            src={`${isExistThumbnail(book)}`}
+            alt={`capa do livro, ${isExistTitle(book)}`}
+          />
+          <StyledViewerByAuthor.BookTitle>
+            {`${isExistTitle(book)}`}
+          </StyledViewerByAuthor.BookTitle>
+          <StyledViewerByAuthor.BookAuthor>
+            {`${isExistAuthor(book)}`}
+          </StyledViewerByAuthor.BookAuthor>
+          <StyledViewerByAuthor.BookPrice>
+            {isExistPrice(book)}
+          </StyledViewerByAuthor.BookPrice>
+        </StyledViewerByAuthor.BookContainer>
+      </StyledViewerByAuthor.BookLink>
+    </StyledViewerByAuthor.Item>
   ));
-
-  console.log(booksFormated);
 
   return booksFormated;
 };
