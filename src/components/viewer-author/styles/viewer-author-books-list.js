@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-const ViewerAuthorBooksList = styled.section`
+const ViewerAuthorBooksList = styled.ul`
+  overflow-x: scroll;
+  overflow-y: hidden;
+  list-style: none;
   display: flex;
-  overflow: scroll;
 `;
 
 export default ViewerAuthorBooksList;

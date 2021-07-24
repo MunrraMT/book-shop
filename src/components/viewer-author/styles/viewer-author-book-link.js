@@ -5,9 +5,10 @@ const ViewerAuthorBookLink = styled.a`
   margin: 0.5rem;
   padding: 0.25rem;
 
-  &:hover,
+  &:hover figure,
   &:focus figure {
     outline: 2px solid var(--color-focus);
+    outline-offset: 4px;
   }
 `;
 
