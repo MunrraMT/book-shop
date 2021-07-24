@@ -1,4 +1,4 @@
-import formatPrice from '../../utils/format-price';
+import formatPrice from '../../../utils/format-price';
 
 const isExistAuthor = (bookActual) => {
   if (bookActual.volumeInfo.authors[0] === undefined) {
