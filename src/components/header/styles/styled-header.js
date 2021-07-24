@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import Form from './form';
-import Input from './input';
-import Label from './label';
-import Span from './span';
-import Title from './title';
+import HeaderForm from './header-form';
+import ByGoogle from './header-google';
+import HeaderInput from './header-input';
+import HeaderLabel from './header-label';
+import HeaderSpan from './header-span';
+import HeaderTitle from './header-title';
 
 const StyledHeader = styled.header`
   background-color: var(--color-background-dark);
@@ -14,10 +15,11 @@ const StyledHeader = styled.header`
   justify-content: center;
 `;
 
-StyledHeader.Title = Title;
-StyledHeader.Label = Label;
-StyledHeader.Input = Input;
-StyledHeader.Span = Span;
-StyledHeader.Form = Form;
+StyledHeader.Title = HeaderTitle;
+StyledHeader.Label = HeaderLabel;
+StyledHeader.Input = HeaderInput;
+StyledHeader.Span = HeaderSpan;
+StyledHeader.Form = HeaderForm;
+StyledHeader.ByGoogle = ByGoogle;
 
 export default StyledHeader;

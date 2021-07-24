@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Input = styled.input`
+const HeaderInput = styled.input`
   height: 2.25rem;
   width: 70vw;
   margin-bottom: 0.75rem;
@@ -27,4 +27,4 @@ const Input = styled.input`
   }
 `;
 
-export default Input;
+export default HeaderInput;
