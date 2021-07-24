@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Span = styled.span`
+const HeaderSpan = styled.span`
   background-color: var(--color-background-light);
   padding: 0.45rem;
   height: 2.25rem;
@@ -12,4 +12,4 @@ const Span = styled.span`
   border-bottom-right-radius: 1rem;
 `;
 
-export default Span;
+export default HeaderSpan;

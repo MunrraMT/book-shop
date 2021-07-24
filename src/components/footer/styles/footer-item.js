@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Li = styled.li`
+const FooterItem = styled.li`
   position: relative;
 
   a {
@@ -20,7 +20,11 @@ const Li = styled.li`
 
   a:hover {
     color: var(--color-text);
+
+    p {
+      background-color: var(--color-hover);
+    }
   }
 `;
 
-export default Li;
+export default FooterItem;

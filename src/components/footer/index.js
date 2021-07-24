@@ -2,16 +2,16 @@ import StyledFooter from './styles/styled-footer';
 
 const Footer = () => (
   <StyledFooter>
-    <StyledFooter.Ul>
-      <StyledFooter.Li>
+    <StyledFooter.List>
+      <StyledFooter.Item>
         <a href='/'>
           <span>
             <i className='fas fa-book' />
           </span>
           livros
         </a>
-      </StyledFooter.Li>
-      <StyledFooter.Li>
+      </StyledFooter.Item>
+      <StyledFooter.Item>
         <a href='/'>
           <span>
             <StyledFooter.Count>12</StyledFooter.Count>
@@ -19,8 +19,8 @@ const Footer = () => (
           </span>
           favoritos
         </a>
-      </StyledFooter.Li>
-      <StyledFooter.Li>
+      </StyledFooter.Item>
+      <StyledFooter.Item>
         <a href='/'>
           <span>
             <StyledFooter.Count>05</StyledFooter.Count>
@@ -28,16 +28,16 @@ const Footer = () => (
           </span>
           carrinho
         </a>
-      </StyledFooter.Li>
-      <StyledFooter.Li>
+      </StyledFooter.Item>
+      <StyledFooter.Item>
         <a rel='ugc' href='https://github.com/MunrraMT/book-shop'>
           <span>
             <i className='fab fa-github' />
           </span>
           GitHub
         </a>
-      </StyledFooter.Li>
-    </StyledFooter.Ul>
+      </StyledFooter.Item>
+    </StyledFooter.List>
   </StyledFooter>
 );
 

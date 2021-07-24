@@ -7,13 +7,11 @@ function App() {
   return (
     <>
       <Header />
-      <main>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path='/' component={BooksPage} />
-          </Switch>
-        </BrowserRouter>
-      </main>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={BooksPage} />
+        </Switch>
+      </BrowserRouter>
       <Footer />
     </>
   );

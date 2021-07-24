@@ -1,4 +1,3 @@
-import React from 'react';
 import StyledHeader from './styles/styled-header';
 
 const Header = () => (
@@ -16,6 +15,11 @@ const Header = () => (
         </StyledHeader.Span>
       </StyledHeader.Label>
     </StyledHeader.Form>
+
+    <StyledHeader.ByGoogle
+      src='./powered_by_google/powered_by_google_on_non_white.png'
+      alt=''
+    />
   </StyledHeader>
 );
 
