@@ -1,5 +1,5 @@
-import Livros from '../components/livros';
+import BooksContent from '../components/books';
 
-const BooksPage = () => <Livros />;
+const BooksPage = () => <BooksContent />;
 
 export default BooksPage;
