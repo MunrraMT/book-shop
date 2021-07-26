@@ -1,19 +1,9 @@
-import { useEffect, useState } from 'react';
+import Loading from '../../../utils/loading';
 
-const booksAuthorTitle = (author) => {
-  const [books, setBooks] = useState([]);
+const booksAuthorTitle = (books) => {
+  if (books.length === 0) return <Loading />;
 
-  useEffect(() => {
-    fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=inauthor:${author}&maxResults=1&langRestric=pt-BR&orderBy=relevance`
-    )
-      .then((response) => response.json())
-      .then(({ items }) => setBooks(items));
-  }, []);
-
-  const booksFormated = books.map((book) => book.volumeInfo.authors[0]);
-
-  return booksFormated;
+  return books[0].volumeInfo.authors[0];
 };
 
 export default booksAuthorTitle;
