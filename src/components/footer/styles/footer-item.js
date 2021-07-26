@@ -7,6 +7,7 @@ const FooterItem = styled.li`
     color: var(--color-hover);
     text-decoration: none;
     text-transform: capitalize;
+    font-weight: bold;
 
     display: flex;
     flex-direction: column;

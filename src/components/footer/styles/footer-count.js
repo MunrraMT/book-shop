@@ -8,6 +8,7 @@ const FooterCount = styled.p`
   border-radius: 100%;
   font-size: 1rem;
   font-weight: 600;
+  color: var(--color-background-dark);
 
   display: flex;
   align-items: center;
