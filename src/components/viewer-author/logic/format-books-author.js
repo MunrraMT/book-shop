@@ -1,3 +1,4 @@
+import LazyLoad from 'react-lazyload';
 import { useEffect, useState } from 'react';
 import StyledViewerByAuthor from '../styles/styled-viewer-by-author';
 import {
@@ -22,12 +23,29 @@ const formatBooksAuthor = (author, maxBooks) => {
     <StyledViewerByAuthor.Item key={book.id}>
       <StyledViewerByAuthor.BookLink href={`/detail/${book.id}`}>
         <StyledViewerByAuthor.BookContainer>
-          <StyledViewerByAuthor.BookImg
-            height='192'
-            width='128'
-            src={`${isExistThumbnail(book)}`}
-            alt={`capa do livro, ${isExistTitle(book)}`}
-          />
+          <LazyLoad
+            once
+            scroll
+            debounce={200}
+            offset={100}
+            key={book.id}
+            height={50}
+            placeholder={
+              <img
+                width='50'
+                height='50'
+                src='./Spin-1s-50px.svg'
+                alt='Loading'
+              />
+            }
+          >
+            <StyledViewerByAuthor.BookImg
+              height='192'
+              width='128'
+              src={`${isExistThumbnail(book)}`}
+              alt={`capa do livro, ${isExistTitle(book)}`}
+            />
+          </LazyLoad>
           <StyledViewerByAuthor.BookTitle>
             {`${isExistTitle(book)}`}
           </StyledViewerByAuthor.BookTitle>
