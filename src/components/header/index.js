@@ -17,8 +17,10 @@ const Header = () => (
     </StyledHeader.Form>
 
     <StyledHeader.ByGoogle
+      height='18'
+      width='144'
       src='./powered_by_google/powered_by_google_on_non_white.png'
-      alt=''
+      alt='powered by Google'
     />
   </StyledHeader>
 );
