@@ -1,7 +1,9 @@
+import StyledLoading from './styles/styled-loading';
+
 const Loading = () => (
-  <section>
+  <StyledLoading>
     <img width='50' height='50' src='./Spin-1s-50px.svg' alt='Loading' />
-  </section>
+  </StyledLoading>
 );
 
 export default Loading;

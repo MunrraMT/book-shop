@@ -1,24 +1,37 @@
+import { useEffect, useState } from 'react';
 import StyledViewerByAuthor from './styles/styled-viewer-by-author';
 
 import booksAuthorTitle from './logic/books-author';
 import formatBooksAuthor from './logic/format-books-author';
 
-const ViewerByAuthor = ({ author, maxBooks }) => (
-  <StyledViewerByAuthor key={booksAuthorTitle(author)}>
-    <header>
-      <StyledViewerByAuthor.Title>
-        {booksAuthorTitle(author)}
-      </StyledViewerByAuthor.Title>
-    </header>
+const ViewerByAuthor = ({ author, maxBooks }) => {
+  const [books, setBooks] = useState([]);
 
-    <StyledViewerByAuthor.BooksList>
-      {formatBooksAuthor(author, maxBooks)}
-    </StyledViewerByAuthor.BooksList>
+  useEffect(() => {
+    fetch(
+      `https://www.googleapis.com/books/v1/volumes?q=inauthor:${author}&maxResults=${maxBooks}&langRestric=pt-BR&orderBy=relevance`
+    )
+      .then((response) => response.json())
+      .then(({ items }) => setBooks(items));
+  }, []);
 
-    <footer>
-      <StyledViewerByAuthor.More>Ver mais</StyledViewerByAuthor.More>
-    </footer>
-  </StyledViewerByAuthor>
-);
+  return (
+    <StyledViewerByAuthor key={booksAuthorTitle(books)}>
+      <header>
+        <StyledViewerByAuthor.Title>
+          {booksAuthorTitle(books)}
+        </StyledViewerByAuthor.Title>
+      </header>
+
+      <StyledViewerByAuthor.BooksList>
+        {formatBooksAuthor(books)}
+      </StyledViewerByAuthor.BooksList>
+
+      <footer>
+        <StyledViewerByAuthor.More>Ver mais</StyledViewerByAuthor.More>
+      </footer>
+    </StyledViewerByAuthor>
+  );
+};
 
 export default ViewerByAuthor;
