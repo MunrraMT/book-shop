@@ -1,8 +1,12 @@
 import BooksContent from '../components/books';
+import Header from '../components/header';
 
 const BooksPage = () => (
   <>
-    <BooksContent />
+    <Header />
+    <main>
+      <BooksContent />
+    </main>
   </>
 );
 
