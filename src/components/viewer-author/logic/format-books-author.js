@@ -7,6 +7,7 @@ import {
   isExistThumbnail,
   isExistTitle
 } from './books-is-valid';
+import Loading from '../../../utils/loading';
 
 const formatBooksAuthor = (author, maxBooks) => {
   const [books, setBooks] = useState([]);
@@ -30,14 +31,7 @@ const formatBooksAuthor = (author, maxBooks) => {
             offset={100}
             key={book.id}
             height={50}
-            placeholder={
-              <img
-                width='50'
-                height='50'
-                src='./Spin-1s-50px.svg'
-                alt='Loading'
-              />
-            }
+            placeholder={<Loading />}
           >
             <StyledViewerByAuthor.BookImg
               height='192'

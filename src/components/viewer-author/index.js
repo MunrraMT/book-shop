@@ -1,8 +1,8 @@
 import StyledViewerByAuthor from './styles/styled-viewer-by-author';
-import formatBooksAuthor from './logic/format-books-author';
-import booksAuthorTitle from './logic/books-author';
 
-// eslint-disable-next-line react/prop-types
+import booksAuthorTitle from './logic/books-author';
+import formatBooksAuthor from './logic/format-books-author';
+
 const ViewerByAuthor = ({ author, maxBooks }) => (
   <StyledViewerByAuthor key={booksAuthorTitle(author)}>
     <header>
