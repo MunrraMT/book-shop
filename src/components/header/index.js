@@ -1,16 +1,14 @@
-import { memo, useContext, useState } from 'react';
+import { memo, useContext } from 'react';
 import { DataContext } from '../../providers/data-context';
 import StyledHeader from './styles';
 
 const Header = () => {
-  const [inputValue, setInputValue] = useState('');
-  const { setTextSearch } = useContext(DataContext);
+  const { textSearch, setTextSearch } = useContext(DataContext);
 
   const saveInputValue = (e) => {
     const { value } = e.target;
 
-    setInputValue(value);
-    setTextSearch(value);
+    setTextSearch(value.toUpperCase());
   };
 
   return (
@@ -20,7 +18,7 @@ const Header = () => {
         <StyledHeader.Label label='texto' aria-label='buscar livro'>
           <StyledHeader.Input
             onInput={saveInputValue}
-            value={inputValue}
+            value={textSearch}
             type='text'
             id='input-search'
             placeholder='Qual livro deseja procurar?'
