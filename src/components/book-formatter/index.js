@@ -5,6 +5,7 @@ import {
   isExistThumbnail,
   isExistTitle
 } from '../../utils/books-is-valid';
+import randomNumber from '../../utils/random-number';
 import showAuthorsNames from '../books-by-author/logic/show-author-names';
 import Loading from '../utils/loading/loading';
 import StyledBookFormated from './styles';
@@ -17,30 +18,33 @@ const BookFormatter = ({ book, formattingTemplate, search }) => {
   };
 
   return (
-    <StyledBookFormated search={search} key={book.id}>
-      <StyledBookFormated.Link href={`/detail/${book.id}`}>
-        <StyledBookFormated.Figure>
+    <StyledBookFormated search={search} key={randomNumber()}>
+      <StyledBookFormated.Link key={randomNumber()} href={`/detail/${book.id}`}>
+        <StyledBookFormated.Figure key={randomNumber()}>
           <LazyLoad
+            key={randomNumber()}
             once
             scroll
             debounce={200}
             offset={100}
-            key={book.id}
             height={50}
             placeholder={<Loading />}
           >
             <StyledBookFormated.Img
+              key={randomNumber()}
               height='192'
               width='128'
               src={`${isExistThumbnail(book)}`}
               alt={`capa do livro, ${isExistTitle(book)}`}
             />
           </LazyLoad>
-          <StyledBookFormated.FigCaption>
+          <StyledBookFormated.FigCaption key={randomNumber()}>
             {isExistTitle(book)}
           </StyledBookFormated.FigCaption>
-          <StyledBookFormated.Author>{author()}</StyledBookFormated.Author>
-          <StyledBookFormated.Price>
+          <StyledBookFormated.Author key={randomNumber()}>
+            {author()}
+          </StyledBookFormated.Author>
+          <StyledBookFormated.Price key={randomNumber()}>
             {isExistPrice(book)}
           </StyledBookFormated.Price>
         </StyledBookFormated.Figure>

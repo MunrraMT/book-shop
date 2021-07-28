@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../../providers/data-context';
+import randomNumber from '../../utils/random-number';
 import authorAsTitle from './logic/author-as-title';
 import formatBooksAuthor from './logic/format-books-author';
 import StyledBooksByAuthor from './styles';
@@ -7,10 +8,6 @@ import StyledBooksByAuthor from './styles';
 const BooksByAuthor = ({ author, maxBooks }) => {
   const [books, setBooks] = useState([]);
   const { setTextSearch } = useContext(DataContext);
-
-  const viewMore = () => {
-    setTextSearch(author.toUpperCase());
-  };
 
   useEffect(() => {
     fetch(
@@ -20,20 +17,24 @@ const BooksByAuthor = ({ author, maxBooks }) => {
       .then(({ items }) => setBooks(items));
   }, []);
 
+  const viewMore = () => {
+    setTextSearch(author.toUpperCase());
+  };
+
   return (
-    <StyledBooksByAuthor key={authorAsTitle(books)}>
+    <StyledBooksByAuthor key={randomNumber()}>
       <header>
-        <StyledBooksByAuthor.Title>
+        <StyledBooksByAuthor.Title key={randomNumber()}>
           {authorAsTitle(books)}
         </StyledBooksByAuthor.Title>
       </header>
 
-      <StyledBooksByAuthor.Ul>
+      <StyledBooksByAuthor.Ul key={randomNumber()}>
         {formatBooksAuthor(books)}
       </StyledBooksByAuthor.Ul>
 
-      <StyledBooksByAuthor.Footer>
-        <StyledBooksByAuthor.More onClick={viewMore}>
+      <StyledBooksByAuthor.Footer key={randomNumber()}>
+        <StyledBooksByAuthor.More key={randomNumber()} onClick={viewMore}>
           Ver mais
         </StyledBooksByAuthor.More>
       </StyledBooksByAuthor.Footer>

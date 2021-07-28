@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../../providers/data-context';
+import randomNumber from '../../utils/random-number';
 import BookFormatter from '../book-formatter';
 import Loading from '../utils/loading/loading';
 import StyledBooksBySearch from './styles';
@@ -17,11 +18,17 @@ const BooksBySearch = () => {
   }, [textSearch]);
 
   return booksList.length === 0 ? (
-    <Loading dark />
+    <Loading key={randomNumber()} dark />
   ) : (
-    <StyledBooksBySearch>
+    <StyledBooksBySearch key={randomNumber()}>
       {booksList.map((book) => (
-        <BookFormatter search dark book={book} formattingTemplate='search' />
+        <BookFormatter
+          key={randomNumber()}
+          search
+          dark
+          book={book}
+          formattingTemplate='search'
+        />
       ))}
     </StyledBooksBySearch>
   );
