@@ -26,9 +26,9 @@ const BooksByAuthor = ({ author, maxBooks }) => {
         {formatBooksAuthor(books)}
       </StyledBooksByAuthor.Ul>
 
-      <footer>
+      <StyledBooksByAuthor.Footer>
         <StyledBooksByAuthor.More>Ver mais</StyledBooksByAuthor.More>
-      </footer>
+      </StyledBooksByAuthor.Footer>
     </StyledBooksByAuthor>
   );
 };

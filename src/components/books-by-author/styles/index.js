@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import BooksByAuthorFooter from './books-by-author-footer';
 import BooksByAuthorUL from './books-by-author-list';
 import BooksByAuthorMore from './books-by-author-more';
 import BooksByAuthorTitle from './books-by-author-title';
@@ -25,5 +26,6 @@ const StyledBooksByAuthor = styled.article`
 StyledBooksByAuthor.Title = BooksByAuthorTitle;
 StyledBooksByAuthor.Ul = BooksByAuthorUL;
 StyledBooksByAuthor.More = BooksByAuthorMore;
+StyledBooksByAuthor.Footer = BooksByAuthorFooter;
 
 export default StyledBooksByAuthor;
