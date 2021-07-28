@@ -7,7 +7,7 @@ const StyledBooksByAuthor = styled.article`
   background-color: var(--color-background-light);
   padding: 1rem;
   padding-top: 0;
-  width: calc(100vw - 2rem);
+  width: calc(100vw - 4rem);
   border-radius: 1rem;
 
   margin: 0 auto;
