@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const StyledBooksBySearch = styled.ul`
   padding: 2rem;
+  padding-bottom: 6rem;
 
   display: grid;
   grid-template-columns: repeat(auto-fill, 8rem);
