@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ViewerAuthorBooksList = styled.ul`
+const BooksByAuthorUL = styled.ul`
   overflow-x: scroll;
   overflow-y: hidden;
   list-style: none;
@@ -9,4 +9,4 @@ const ViewerAuthorBooksList = styled.ul`
   display: flex;
 `;
 
-export default ViewerAuthorBooksList;
+export default BooksByAuthorUL;

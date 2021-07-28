@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const ViewerAuthorMore = styled.p`
+const BooksByAuthorMore = styled.p`
   padding: 0.5rem;
   color: var(--color-text);
 `;
 
-export default ViewerAuthorMore;
+export default BooksByAuthorMore;
