@@ -1,22 +1,22 @@
 import { createContext, useState } from 'react';
 
 const DataContext = createContext({
-  books: [],
+  textSearch: '',
   favorites: [],
   cart: []
 });
 
 // eslint-disable-next-line react/prop-types
 const DataProvider = ({ children }) => {
-  const [books, setBooks] = useState([]);
+  const [textSearch, setTextSearch] = useState('');
   const [favorites, setFavorites] = useState([]);
   const [cart, setCart] = useState([]);
 
   return (
     <DataContext.Provider
       value={{
-        books,
-        setBooks,
+        textSearch,
+        setTextSearch,
         favorites,
         setFavorites,
         cart,
