@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../../providers/data-context';
 import randomNumber from '../../utils/random-number';
 import BookFormatter from '../book-formatter';
-import Loading from '../utils/loading/loading';
+import Loading from '../utils/loading';
 import StyledBooksBySearch from './styles';
 
 const BooksBySearch = () => {

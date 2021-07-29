@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import DetailBook from '../components/detail-book';
-import Loading from '../components/utils/loading/loading';
+import Loading from '../components/utils/loading';
 import randomNumber from '../utils/random-number';
 
 const DetailsBookPage = () => {

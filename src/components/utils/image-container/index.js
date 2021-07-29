@@ -1,7 +1,7 @@
 import LazyLoad from 'react-lazyload';
 import { isExistThumbnail, isExistTitle } from '../../../utils/books-is-valid';
 import randomNumber from '../../../utils/random-number';
-import Loading from '../loading/loading';
+import Loading from '../loading';
 
 const ImageContainer = ({ book }) => (
   <LazyLoad

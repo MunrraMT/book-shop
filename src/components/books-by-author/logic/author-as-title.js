@@ -1,5 +1,5 @@
 import randomNumber from '../../../utils/random-number';
-import Loading from '../../utils/loading/loading';
+import Loading from '../../utils/loading';
 
 const authorAsTitle = (books) => {
   if (books.length === 0) return <Loading key={randomNumber()} />;
