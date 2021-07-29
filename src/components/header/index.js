@@ -32,7 +32,7 @@ const Header = () => {
       <StyledHeader.ByGoogle
         height='18'
         width='144'
-        src='./powered_by_google/powered_by_google_on_non_white.png'
+        src='/powered_by_google/powered_by_google_on_non_white.png'
         alt='powered by Google'
       />
     </StyledHeader>
