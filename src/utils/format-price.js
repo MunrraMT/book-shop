@@ -1,14 +1,11 @@
 const formatPrice = (value) => {
   const priceSplit = String(value).split('.');
-  const real = priceSplit[0];
 
-  if (priceSplit[1] === undefined) {
-    return `R$ ${real},00`;
-  }
+  if (priceSplit[1] === undefined) return `R$ ${priceSplit[0]},00`;
+  if (priceSplit[1].length === 1)
+    return `R$ ${priceSplit[0]},0${priceSplit[1]}`;
 
-  const centavos = Number(priceSplit[1]) * 10;
-
-  return `R$ ${real},${centavos}`;
+  return `R$ ${priceSplit[0]},${priceSplit[1]}`;
 };
 
 export default formatPrice;
