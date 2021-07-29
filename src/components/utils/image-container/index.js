@@ -1,5 +1,6 @@
 import LazyLoad from 'react-lazyload';
-import { isExistThumbnail, isExistTitle } from '../../../utils/books-is-valid';
+import isExistThumbnail from '../../../utils/is-exist-thumbnail';
+import isExistTitle from '../../../utils/is-exist-title';
 import randomNumber from '../../../utils/random-number';
 import Loading from '../loading';
 

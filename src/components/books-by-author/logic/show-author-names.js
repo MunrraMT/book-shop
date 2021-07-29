@@ -1,4 +1,4 @@
-import { isExistAuthor } from '../../../utils/books-is-valid';
+import isExistAuthor from '../../../utils/is-exist-author';
 import randomNumber from '../../../utils/random-number';
 
 const showAuthorsNames = (book) =>

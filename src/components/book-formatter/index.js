@@ -1,12 +1,10 @@
-import {
-  isExistAuthor,
-  isExistPrice,
-  isExistTitle
-} from '../../utils/books-is-valid';
 import randomNumber from '../../utils/random-number';
 import ImageContainer from '../utils/image-container';
 import showAuthorsNames from '../books-by-author/logic/show-author-names';
 import StyledBookFormated from './styles';
+import isExistTitle from '../../utils/is-exist-title';
+import isExistAuthor from '../../utils/is-exist-author';
+import isExistPrice from '../../utils/is-exist-price';
 
 const BookFormatter = ({ book, formattingTemplate, search }) => {
   const author = () => {
