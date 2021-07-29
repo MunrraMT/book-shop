@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import BookFormatter from '../components/book-formatter';
+import DetailBook from '../components/detail-book';
 import Loading from '../components/utils/loading/loading';
 import randomNumber from '../utils/random-number';
 
@@ -17,13 +17,7 @@ const DetailsBookPage = () => {
   return book.length === 0 ? (
     <Loading key={randomNumber()} dark />
   ) : (
-    <BookFormatter
-      key={randomNumber()}
-      search
-      dark
-      book={book}
-      formattingTemplate='search'
-    />
+    <DetailBook book={book} />
   );
 };
 
